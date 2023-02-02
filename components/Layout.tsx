@@ -12,9 +12,9 @@ const Layout = ({ session, children }: Props) => {
   return (
     <>
       <Head>
-        <title>MidJourney & Dall-E Clone</title>
+        <title>DALL-E 2.0 Clone</title>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content="MidJourney & Dall-E Clone" />
+        <meta name="description" content="DALL-E 2.0 Clone" />
       </Head>
 
       <div className="flex flex-col z-0">

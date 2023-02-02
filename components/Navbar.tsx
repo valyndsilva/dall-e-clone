@@ -63,7 +63,7 @@ function Navbar({ session }: Props) {
       <div className="flex space-x-6 items-center">
         <Link href="/" className="w-40 text-left flex space-x-2 items-center">
           <BoltIcon className="w-6 h-6 text-white" />
-          <h1 className="text-white font-extrabold text-md">Midjourney AI</h1>
+          <h1 className="text-white font-extrabold text-md">DALL-E</h1>
         </Link>
 
         <form
