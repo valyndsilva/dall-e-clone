@@ -11,7 +11,7 @@ type Props = {
 };
 
 function ShowcaseCards({ data, title }: Props) {
-  const { generateData, setGenerateData, setErrorMsg } =
+  const { generateData, setGenerateData, setErrorMsg, session } =
     useContext(DataContext);
   // console.log(data);
   const router = useRouter();
@@ -56,28 +56,35 @@ function ShowcaseCards({ data, title }: Props) {
               <div className="w-7 h-7 rounded-full object-cover bg-green-700 flex justify-center items-center text-white text-xs font-bold">
                 {post.name[0]}
               </div>
-              <p className="text-white text-sm">{`${post.name.substring(0,18)}...`}</p>
+              <p className="text-white text-sm">{`${post.name.substring(
+                0,
+                18
+              )}...`}</p>
             </div>
-            <div className="space-x-4">
-              <button
-                type="button"
-                onClick={() =>
-                  // downloadImage(photo.url, index)}
-                  // downloadImage(`data:image/jpeg;base64,${photo.b64_json}`, index)
-                  downloadImage(`${post.photoURL}`, index)
-                }
-                className="outline-none bg-transparent text-white  p-2 border border-gray-500 rounded-full hover:bg-gray-400 hover:text-gray-800"
-              >
-                <ArrowDownTrayIcon className="w-5 h-5" />
-              </button>
-              <button
-                type="button"
-                onClick={() => handleDelete(`${post._id}`)}
-                className="outline-none bg-transparent text-white p-2 border border-gray-500 rounded-full hover:bg-gray-400 hover:text-gray-800"
-              >
-                <TrashIcon className="w-5 h-5" />
-              </button>
-            </div>
+            {session && (
+              <div className="space-x-4">
+                <button
+                  type="button"
+                  onClick={() =>
+                    // downloadImage(photo.url, index)}
+                    // downloadImage(`data:image/jpeg;base64,${photo.b64_json}`, index)
+                    downloadImage(`${post.photoURL}`, index)
+                  }
+                  className="outline-none bg-transparent text-white  p-2 border border-gray-500 rounded-full hover:bg-gray-400 hover:text-gray-800"
+                >
+                  <ArrowDownTrayIcon className="w-5 h-5" />
+                </button>
+                {session.user?.name === post.name && (
+                  <button
+                    type="button"
+                    onClick={() => handleDelete(`${post._id}`)}
+                    className="outline-none bg-transparent text-white p-2 border border-gray-500 rounded-full hover:bg-gray-400 hover:text-gray-800"
+                  >
+                    <TrashIcon className="w-5 h-5" />
+                  </button>
+                )}
+              </div>
+            )}
           </div>
         </div>
       </div>

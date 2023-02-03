@@ -20,8 +20,8 @@ function Showcase({ posts }: Props) {
     userPosts,
     session,
   } = useContext(DataContext);
-  console.log({ posts });
-  console.log({ userPosts });
+  // console.log({ posts });
+  // console.log({ userPosts });
 
   return (
     <div className="w-full flex flex-col space-y-6 max-w-screen-2xl p-6 text-white">

@@ -14,7 +14,10 @@ const Layout = ({ session, children }: Props) => {
       <Head>
         <title>DALL-E 2.0 Clone</title>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content="DALL-E 2.0 Clone" />
+        <meta
+          name="description"
+          content="DALL-E 2.0 - Create realistic images and art from a description in natural language"
+        />
       </Head>
 
       <div className="flex flex-col z-0">
