@@ -3,6 +3,7 @@ import Head from "next/head";
 import Navbar from "./Navbar";
 import { useSession } from "next-auth/react";
 import { Session } from "next-auth";
+import Footer from "./Footer";
 
 interface Props {
   children?: React.ReactNode;
@@ -25,6 +26,7 @@ const Layout = ({ session, children }: Props) => {
           <Navbar session={session} />
           {children}
         </main>
+        <Footer/>
       </div>
     </>
   );

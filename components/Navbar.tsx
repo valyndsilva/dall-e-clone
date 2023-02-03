@@ -62,7 +62,8 @@ function Navbar({ session }: Props) {
     <header className="h-[10vh] w-full flex justify-between items-center bg-[#08080E] sm:px-8 px-4 py-4 border-b border-b-gray-700">
       <div className="flex space-x-6 items-center">
         <Link href="/" className="w-40 text-left flex space-x-2 items-center">
-          <BoltIcon className="w-6 h-6 text-white" />
+          {/* <BoltIcon className="w-6 h-6 text-white" /> */}
+          <Image src="/dalle.png" alt="dall-e logo" className="object-contain" width={30} height={30} />
           <h1 className="text-white font-extrabold text-md">DALL-E</h1>
         </Link>
 

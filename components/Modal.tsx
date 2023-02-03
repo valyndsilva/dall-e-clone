@@ -26,11 +26,11 @@ function Modal({session}: Props) {
               </div>
               <div className="col-span-1 w-full flex flex-col justify-center items-center">
                 <Image
-                  src="/midjourney.png"
+                  src="/dall-e.png"
                   alt=""
-                  width={100}
-                  height={100}
-                  className="object-contain mb-5 rounded-full"
+                  width={200}
+                  height={200}
+                  className="object-contain mb-5 rounded-full bg-gray-700"
                 />
                 <h2 className="text-md mt-2 mx-4 text-gray-400 font-medium text-center">
                   Sign in to create your first image
